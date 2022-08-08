@@ -5,10 +5,7 @@ import path from "path";
 const routes = (app) => {
 
 
-    app.use(express.static('./dist/library-app'));
 
-    app.route('/*')
-        .get((req, res) => { res.sendFile(path.join(__dirname + '/dist/library-app/index.html')); });
     app.route('/api/books')
         .get((req, res, next) => {
 
