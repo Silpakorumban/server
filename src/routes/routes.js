@@ -6,7 +6,7 @@ const routes = (app) => {
 
 
 
-    app.route('/api/books')
+    app.route('api/books')
         .get((req, res, next) => {
 
             // middleware
