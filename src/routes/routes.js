@@ -9,7 +9,7 @@ const routes = (app) => {
 
     app.route('/*')
         .get((req, res) => { res.sendFile(path.join(__dirname + '/dist/library-app/index.html')); });
-    app.route('/api/books')
+    app.route('/books')
         .get((req, res, next) => {
 
             // middleware
