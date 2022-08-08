@@ -15,7 +15,7 @@ app.use(express.static('./dist/library-app'))
 // body parser
 
 app.use(express.json());
-// app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 
