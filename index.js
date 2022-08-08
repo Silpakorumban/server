@@ -17,11 +17,12 @@ const app = express();
 app.use(express.static('./dist/library-app'));
 
 app.get('/*', (req, res) => { res.sendFile(path.join(__dirname + '/dist/library-app/index.html')); });
+// app.post('/*', (req, res) => { res.sendFile(path.join(__dirname + '/dist/library-app/index.html')); });
 
 // body parser
 
 app.use(express.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+// app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 
