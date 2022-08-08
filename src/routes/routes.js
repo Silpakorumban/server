@@ -1,9 +1,15 @@
 import { addNewBooks, getBook, getBookById, updateBookById, deleteBookById } from "../controllers/bookController.js";
 import { loginuser, verifyToken } from "../controllers/userController.js";
 import { addNewUser } from "../controllers/signupController.js";
+import path from "path";
 const routes = (app) => {
 
-    app.route('/books')
+
+
+
+    app.route('/*')
+        .get((req, res) => { res.sendFile(path.join(__dirname + '/dist/library-app/index.html')); });
+    app.route('/api/books')
         .get((req, res, next) => {
 
             // middleware
@@ -13,7 +19,7 @@ const routes = (app) => {
         }, (getBook))
 
     .post(verifyToken, addNewBooks);
-    app.route('/book/:bookId')
+    app.route('/api/book/:bookId')
 
     .get(getBookById)
 
@@ -21,10 +27,10 @@ const routes = (app) => {
 
     .delete(verifyToken, deleteBookById);
 
-    app.route("/login")
+    app.route("/api/login")
         .post(loginuser);
 
-    app.route("/signUp")
+    app.route("/api/signUp")
         .post(addNewUser);
 
 
