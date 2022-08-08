@@ -6,7 +6,7 @@ const routes = (app) => {
 
 
 
-    app.route('api/books')
+    app.route("api/books")
         .get((req, res, next) => {
 
             // middleware
@@ -16,7 +16,7 @@ const routes = (app) => {
         }, (getBook))
 
     .post(verifyToken, addNewBooks);
-    app.route('/api/book/:bookId')
+    app.route("/api/book/:bookId")
 
     .get(getBookById)
 
