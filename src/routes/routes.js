@@ -14,7 +14,6 @@ const routes = (app) => {
             console.log(`request type:${req.method}`)
             next();
         }, (getBook))
-    app.route("/api/add")
         .post(verifyToken, addNewBooks);
     app.route("/api/book/:bookId")
 
