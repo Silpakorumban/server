@@ -2,12 +2,12 @@ import { addNewBooks, getBook, getBookById, updateBookById, deleteBookById } fro
 import { loginuser, verifyToken } from "../controllers/userController.js";
 import { addNewUser } from "../controllers/signupController.js";
 import path from "path";
-// import { fileURLToPath } from 'url';
+import { fileURLToPath } from 'url';
 
-// const __filename = fileURLToPath(
-//     import.meta.url);
+const __filename = fileURLToPath(
+    import.meta.url);
 
-// const __dirname = path.dirname(__filename);
+const __dirname = path.dirname(__filename);
 const routes = (app) => {
 
 
@@ -24,7 +24,7 @@ const routes = (app) => {
             next();
         }, (getBook))
         .post(verifyToken, addNewBooks);
-    app.route("/api/books/:bookId")
+    app.route("/api/book/:bookId")
 
     .get(getBookById)
 
