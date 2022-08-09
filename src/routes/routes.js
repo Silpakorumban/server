@@ -15,7 +15,7 @@ const routes = (app) => {
             next();
         }, (getBook))
         .post(verifyToken, addNewBooks);
-    app.route("/api/book/:bookId")
+    app.route("/api/books/:bookId")
 
     .get(getBookById)
 
