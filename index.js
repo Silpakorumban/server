@@ -9,7 +9,7 @@ import path from "path";
 
 const app = express();
 
-app.use(express.static('.\dist\library-app'));
+app.use(express.static('./dist/library-app'));
 
 
 // app.post('/*', (req, res) => { res.sendFile(path.join(__dirname + '/dist/library-app/index.html')); });
