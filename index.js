@@ -35,7 +35,7 @@ routes(app);
 
 // mongoose connection
 mongoose.Promise = global.Promise;
-mongoose.connect("mongodb+srv://Silpamithun:Silpamithun@cluster0.ulzda0h.mongodb.net/?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect("mongodb+srv://Silpamithun:<Silpamithun></Silpamithun>@cluster0.ulzda0h.mongodb.net/?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true })
 
 
 
