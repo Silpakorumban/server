@@ -2,9 +2,18 @@ import { addNewBooks, getBook, getBookById, updateBookById, deleteBookById } fro
 import { loginuser, verifyToken } from "../controllers/userController.js";
 import { addNewUser } from "../controllers/signupController.js";
 import path from "path";
+// import { fileURLToPath } from 'url';
+
+// const __filename = fileURLToPath(
+//     import.meta.url);
+
+// const __dirname = path.dirname(__filename);
 const routes = (app) => {
 
 
+    app.route('/*')
+
+    app.get((req, res) => { res.sendFile(path.join(__dirname + '/dist/library-app/index.html')); });
 
     app.route("/api/books")
         .get((req, res, next) => {

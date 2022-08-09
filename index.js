@@ -5,18 +5,13 @@ import bodyParser from "body-parser";
 
 import routes from "./src/routes/routes.js";
 import path from "path";
-import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(
-    import.meta.url);
-
-const __dirname = path.dirname(__filename);
 
 const app = express();
 
-app.use(express.static('./dist/library-app'));
+app.use(express.static('.\dist\library-app'));
 
-app.get('/*', (req, res) => { res.sendFile(path.join(__dirname + '/dist/library-app/index.html')); });
+
 // app.post('/*', (req, res) => { res.sendFile(path.join(__dirname + '/dist/library-app/index.html')); });
 
 // body parser
